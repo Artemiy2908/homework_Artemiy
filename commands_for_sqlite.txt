@@ -1,0 +1,130 @@
+
+1)
+/*SELECT LastName,
+       FirstName
+  FROM customers
+ WHERE City = "Prague";
+
+*/
+
+2)
+/*SELECT LastName,
+       FirstName
+  FROM customers
+ WHERE FirstName LIKE "M%";
+*/
+
+/*SELECT LastName,
+       FirstName
+  FROM customers
+ WHERE FirstName LIKE "%сh%";
+*/
+
+3)
+/*SELECT Name,
+       Bytes / 1048576 as "Mbytes"
+  FROM tracks;
+*/
+
+4)
+
+/*SELECT LastName,
+       FirstName
+  FROM employees
+ WHERE HireDate >= date("2002-01-01") AND 
+       HireDate < date("2003-01-01") AND 
+       City = "Calgary";
+*/
+
+5)
+
+/*SELECT LastName,
+       FirstName
+  FROM employees
+ WHERE HireDate - BirthDate >= 40;
+*/
+
+6)
+/*SELECT *
+  FROM customers
+ WHERE Country = "USA" AND 
+       Fax IS NULL;
+*/
+
+7)
+/*SELECT ShipCity
+  FROM sales
+ WHERE ShipCountry = "Canada" AND 
+       ( (SalesDate LIKE "%-08-%") OR 
+         (SalesDate LIKE "%-09-%") );
+*/
+
+8)
+/*SELECT *
+  FROM customers
+ WHERE Email LIKE "%@gmail.com";
+*/
+
+9)
+/*SELECT *
+  FROM employees
+ WHERE date("now") - HireDate >= 18;
+*/
+
+10)
+/*SELECT Title
+  FROM employees
+ GROUP BY Title
+ ORDER BY Title;
+*/
+ 
+
+
+11)
+/*SELECT LastName,
+       FirstName,
+       strftime("%Y", "now") - Age as "BirthYear"
+  FROM customers
+ ORDER BY LastName,
+          FirstName,
+          strftime("%Y", "now") - Age;
+*/
+
+
+12)
+/*SELECT Milliseconds / 1000 as "Seconds"
+  FROM tracks
+ ORDER BY Milliseconds
+ LIMIT 1;
+*/
+
+
+13)
+/*SELECT Name, Milliseconds / 1000 as "Seconds"
+  FROM tracks
+ ORDER BY Milliseconds
+ LIMIT 1;
+*/
+
+
+14)
+/*SELECT Country,
+       avg(Age) 
+  FROM customers
+ GROUP BY Country;
+*/
+
+
+15)
+/*SELECT LastName
+  FROM employees
+ WHERE date(HireDate) LIKE "%-10-%";
+*/
+
+
+16)
+/*SELECT LastName
+  FROM employees
+ ORDER BY (date(HireDate) - date(BirthDate) ) DESC
+ LIMIT 1;
+*/
